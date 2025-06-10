@@ -40,3 +40,28 @@ int main() {
 
     return 0;
 }
+#include <iostream>
+
+unsigned long long factorial(int n) {
+    if (n == 0 || n == 1) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
+
+int main() {
+    int numero;
+
+    // Solicitar al usuario que ingrese un número entero
+    std::cout << "Ingrese un número entero para calcular su factorial: ";
+    std::cin >> numero;
+
+    // Calcular el factorial
+    unsigned long long resultado = factorial(numero);
+
+    // Mostrar el resultado
+    std::cout << "El factorial de " << numero << " es: " << resultado << std::endl;
+
+    return 0;
+}
